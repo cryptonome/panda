@@ -162,7 +162,7 @@ uint32_t marker = 0;
 void white_usb_power_mode_tick(uint32_t uptime){
 
   // on EON or BOOTSTUB, no state machine
-#if !defined(BOOTSTUB) && !defined(EON)
+/*#if !defined(BOOTSTUB) && !defined(EON)
   #define CURRENT_THRESHOLD 0xF00U
   #define CLICKS 5U // 5 seconds to switch modes
 
@@ -220,9 +220,9 @@ void white_usb_power_mode_tick(uint32_t uptime){
       puts("USB power mode invalid\n");  // set_usb_power_mode prevents assigning invalid values
       break;
   }
-#else
+#else*/
   UNUSED(uptime);
-#endif
+//#endif
 }
 
 void white_set_ir_power(uint8_t percentage){
